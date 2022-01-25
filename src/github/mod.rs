@@ -28,7 +28,7 @@ pub fn get_release(
         repo = &repository.repo,
         release = tag
             .map(|t| format!("tags/{}", t.0))
-            .unwrap_or_else(|| String::from("latest"))
+            .unwrap_or_else(|| "latest".into())
     );
 
     client
